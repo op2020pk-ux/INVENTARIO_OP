@@ -9,3 +9,6 @@ El Sistema esta creado en XAMPP y es totalmente gratis.
 -- GRACIAS.
 
 -- Diseñado por: OP
+
+Usuario: admin
+Clave: admin123
