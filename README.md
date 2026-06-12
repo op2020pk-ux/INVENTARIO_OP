@@ -10,5 +10,5 @@ El Sistema esta creado en XAMPP y es totalmente gratis.
 
 -- Diseñado por: OP
 
-Usuario: admin
-Clave: admin123
+-- Usuario: admin
+-- Clave: admin123
