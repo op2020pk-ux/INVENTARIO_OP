@@ -1,0 +1,101 @@
+/* ======================================================================
+   PROYECTO: Inventario_OP
+   ESTILO: productos.css
+   ====================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+}
+
+.contenedor-sistema {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.barra-lateral {
+    width: 260px;
+    background-color: #0b192c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.logo-sistema { padding: 20px; background-color: #1e3a8a; text-align: center; }
+.logo-sistema h2 { font-size: 1.1rem; font-weight: 700; }
+.etiqueta-rol { display: inline-block; font-size: 0.75rem; background-color: rgba(255, 255, 255, 0.2); padding: 2px 8px; border-radius: 10px; margin-top: 4px; }
+.menu-navegacion { display: flex; flex-direction: column; padding: 10px 0; }
+.menu-navegacion a { color: #94a3b8; text-decoration: none; padding: 12px 20px; display: block; font-size: 0.95rem; }
+.menu-navegacion a:hover, .menu-navegacion a.activo { background-color: #1e293b; color: #ffffff; border-left: 4px solid #3b82f6; }
+.seccion-mantenimiento { padding: 15px 20px 5px 20px; font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: bold; }
+
+/* --- CABECERA --- */
+.cabecera-superior { background-color: #2563eb; color: #ffffff; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; }
+.perfil-usuario { display: flex; align-items: center; gap: 15px; }
+.badge-tasa { background-color: #10b981; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; }
+.btn-cerrar-sesion { background-color: #ef4444; color: white; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+
+/* --- CUERPO GENERAL --- */
+.contenido-principal { flex: 1; display: flex; flex-direction: column; }
+.area-trabajo { padding: 30px; }
+.titulo-pagina { font-size: 1.6rem; color: #1e293b; margin-bottom: 25px; }
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 25px;
+    align-items: start;
+}
+
+@media(max-width: 1100px) { .grilla-productos { grid-template-columns: 1fr; } }
+
+.bloque-formulario, .bloque-tabla { background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.bloque-formulario h2, .bloque-tabla h2 { font-size: 1.1rem; color: #1e293b; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+
+.grupo-campo { margin-bottom: 16px; }
+.grupo-campo label { display: block; font-size: 0.88rem; color: #475569; font-weight: 600; margin-bottom: 6px; }
+.grupo-campo input, .grupo-campo select { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; color: #1e293b; }
+.grupo-campo input:focus, .grupo-campo select:focus { outline: none; border-color: #3b82f6; }
+.doble-columna { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.btn-guardar { width: 100%; background-color: #8b5cf6; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; margin-top: 5px; }
+.btn-guardar:hover { background-color: #7c3aed; }
+
+/* Tipografías y Tablas */
+.tabla-responsiva { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
+th { background-color: #f8fafc; color: #64748b; padding: 12px; font-weight: 600; border-bottom: 2px solid #e2e8f0; }
+td { padding: 12px; border-bottom: 1px solid #f1f5f9; color: #334155; vertical-align: middle; }
+
+.txt-codigo { background-color: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: #475569; }
+.txt-proveedor { color: #64748b; font-size: 0.85rem; }
+.txt-compra { color: #64748b; font-size: 0.82rem; }
+.txt-venta { color: #10b981; font-weight: 600; }
+
+/* Contadores Dinámicos de Stock */
+.badge-stock { padding: 3px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: bold; }
+.badge-stock.normal { background-color: #e0f2fe; color: #0369a1; }
+.badge-stock.critico { background-color: #fee2e2; color: #b91c1c; animation: parpadeo 2s infinite; }
+
+/* Estados */
+.badge-estado { padding: 3px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+.badge-estado.activo { background-color: #d1fae5; color: #065f46; }
+
+.tabla-vacia { text-align: center; color: #94a3b8; padding: 30px 0; }
+
+/* Alertas */
+.alerta { padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9rem; font-weight: 500; }
+.alerta.exito { background-color: #d1fae5; border-left: 4px solid #10b981; color: #065f46; }
+.alerta.error { background-color: #fee2e2; border-left: 4px solid #ef4444; color: #991b1b; }
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}

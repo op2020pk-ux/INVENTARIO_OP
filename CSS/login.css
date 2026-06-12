@@ -1,0 +1,167 @@
+/* ======================================================================
+   PROYECTO: Inventario_OP
+   ESTILO: login.css (Versión con Imagen de Fondo Completa)
+   ====================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cuerpo-login {
+    /* Cargar la imagen Quiosco_1.png abarcando todo el fondo */
+    background: url('../IMG/Quiosco_1.png') no-repeat center center fixed;
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Capa oscura translúcida para que la imagen de fondo no opaque la tarjeta */
+.cuerpo-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.65); /* Filtro oscuro elegante */
+    z-index: 1;
+}
+
+.tarjeta-login {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Coloca la tarjeta por encima del filtro oscuro */
+}
+
+.encabezado-login {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-login {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.encabezado-login h2 {
+    color: #1e293b;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.encabezado-login p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* Campos del Formulario */
+.grupo-entrada {
+    margin-bottom: 20px;
+}
+
+.grupo-entrada label {
+    display: block;
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.grupo-entrada input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.grupo-entrada input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Botón de envío */
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-bottom: 15px;
+}
+
+.btn-ingresar:hover {
+    background-color: #2563eb;
+}
+
+.btn-ingresar:active {
+    transform: scale(0.98);
+}
+
+/* Opción de Crear Usuario */
+.opcion-registro {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.opcion-registro a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.opcion-registro a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Alertas de error */
+.alerta-error {
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Pie de página */
+.pie-login {
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.pie-login p {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}

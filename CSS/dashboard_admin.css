@@ -1,0 +1,203 @@
+/* ======================================================================
+   PROYECTO: Inventario_OP
+   ESTILO: dashboard_admin.css
+   ====================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+}
+
+.contenedor-sistema {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+.barra-lateral {
+    width: 260px;
+    background-color: #0b192c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-sistema {
+    padding: 20px;
+    background-color: #1e3a8a;
+    text-align: center;
+}
+
+.logo-sistema h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.menu-navegacion a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.menu-navegacion a:hover, .menu-navegacion a.activo {
+    background-color: #1e293b;
+    color: #ffffff;
+    border-left: 4px solid #3b82f6;
+}
+
+.seccion-mantenimiento {
+    padding: 15px 20px 5px 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera-superior {
+    background-color: #2563eb;
+    color: #ffffff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.titulo-cabecera {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.badge-tasa {
+    background-color: #10b981;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.usuario-nombre {
+    font-size: 0.9rem;
+}
+
+.btn-cerrar-sesion {
+    background-color: #ef4444;
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #dc2626;
+}
+
+/* --- ÁREA DE TRABAJO E INDICADORES --- */
+.area-trabajo {
+    padding: 30px;
+}
+
+.titulo-pagina {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Tarjetas */
+.grilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-indicador {
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.icono-tarjeta {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.info-tarjeta {
+    padding: 15px;
+    flex: 1;
+}
+
+.info-tarjeta h3 {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.info-tarjeta .contador {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 5px;
+}
+
+/* Colores de las Tarjetas (Bordes izquierdos e iconos) */
+.azul .icono-tarjeta { background-color: #3b82f6; }
+.azul { border-left: 4px solid #3b82f6; }
+
+.turquesa .icono-tarjeta { background-color: #06b6d4; }
+.turquesa { border-left: 4px solid #06b6d4; }
+
+.amarillo .icono-tarjeta { background-color: #f59e0b; }
+.amarillo { border-left: 4px solid #f59e0b; }
+
+.oscuro .icono-tarjeta { background-color: #1e293b; }
+.oscuro { border-left: 4px solid #1e293b; }
+
+.naranja .icono-tarjeta { background-color: #f97316; }
+.naranja { border-left: 4px solid #f97316; }
+
+.morado .icono-tarjeta { background-color: #8b5cf6; }
+.morado { border-left: 4px solid #8b5cf6; }
+
+.rosa .icono-tarjeta { background-color: #ec4899; }
+.rosa { border-left: 4px solid #ec4899; }

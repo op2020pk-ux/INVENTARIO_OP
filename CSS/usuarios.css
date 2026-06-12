@@ -1,0 +1,78 @@
+/* ======================================================================
+   PROYECTO: Inventario_OP
+   ESTILO: usuarios.css
+   ====================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: #f1f5f9; }
+
+.contenedor-sistema { display: flex; min-height: 100vh; }
+
+/* --- BARRA LATERAL --- */
+.barra-lateral { width: 260px; background-color: #0b192c; color: #ffffff; display: flex; flex-direction: column; }
+.logo-sistema { padding: 20px; background-color: #1e3a8a; text-align: center; }
+.logo-sistema h2 { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.etiqueta-rol { display: inline-block; font-size: 0.75rem; background-color: rgba(255, 255, 255, 0.2); padding: 2px 8px; border-radius: 10px; margin-top: 4px; }
+.menu-navegacion { display: flex; flex-direction: column; padding: 10px 0; }
+.menu-navegacion a { color: #94a3b8; text-decoration: none; padding: 12px 20px; display: block; font-size: 0.95rem; }
+.menu-navegacion a:hover, .menu-navegacion a.activo { background-color: #1e293b; color: #ffffff; border-left: 4px solid #3b82f6; }
+.seccion-mantenimiento { padding: 15px 20px 5px 20px; font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: bold; }
+
+/* --- CABECERA --- */
+.cabecera-superior { background-color: #2563eb; color: #ffffff; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; }
+.perfil-usuario { display: flex; align-items: center; gap: 15px; }
+.badge-tasa { background-color: #10b981; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; }
+.btn-cerrar-sesion { background-color: #ef4444; color: white; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+
+/* --- CUERPO EN GRID --- */
+.contenido-principal { flex: 1; display: flex; flex-direction: column; }
+.area-trabajo { padding: 30px; }
+.titulo-pagina { font-size: 1.6rem; color: #1e293b; margin-bottom: 25px; }
+
+.layout-usuarios { display: flex; flex-wrap: wrap; gap: 25px; }
+.tarjeta-usuario-form { flex: 1; min-width: 300px; background: #ffffff; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: fit-content; }
+.tarjeta-usuario-tabla { flex: 2.5; min-width: 550px; background: #ffffff; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+
+.tarjeta-usuario-form h2, .tarjeta-usuario-tabla h2 { font-size: 1.1rem; color: #1e293b; margin-bottom: 18px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+
+/* Formulario Inputs */
+.grupo-campo { margin-bottom: 15px; }
+.grupo-campo label { display: block; font-size: 0.88rem; font-weight: 600; color: #475569; margin-bottom: 6px; }
+.grupo-campo input, .select-form { width: 100%; padding: 10px 12px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; background: #fff; }
+.grupo-campo input:focus, .select-form:focus { outline: none; border-color: #3b82f6; }
+
+.btn-guardar-user { width: 100%; background-color: #2563eb; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 0.95rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+.btn-guardar-user:hover { background-color: #1d4ed8; }
+
+/* Tablas */
+.tabla-responsiva { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+th { background-color: #f8fafc; color: #64748b; padding: 12px 10px; border-bottom: 2px solid #e2e8f0; text-align: left; }
+td { padding: 12px 10px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+
+.badge-id { color: #64748b; font-weight: bold; }
+.txt-user { background: #eff6ff; color: #1e40af; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+
+/* Badges de Roles */
+.badge-rol { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.78rem; font-weight: bold; text-transform: uppercase; }
+.badge-rol.admin { background-color: #fee2e2; color: #991b1b; }
+.badge-rol.staff { background-color: #e0f2fe; color: #0369a1; }
+
+/* Indicadores de Estados */
+.estado-indicador { font-weight: 600; font-size: 0.85rem; }
+.estado-indicador.activo { color: #16a34a; }
+.estado-indicador.inactivo { color: #dc2626; }
+
+.btn-eliminar-user { background-color: #fee2e2; color: #ef4444; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; transition: background 0.2s; }
+.btn-eliminar-user:hover { background-color: #fca5a5; color: #991b1b; }
+
+/* Alertas */
+.alerta { padding: 14px; border-radius: 6px; margin-bottom: 20px; font-size: 0.92rem; }
+.alerta.exito { background-color: #d1fae5; border-left: 4px solid #10b981; color: #065f46; }
+.alerta.error { background-color: #fee2e2; border-left: 4px solid #ef4444; color: #991b1b; }
